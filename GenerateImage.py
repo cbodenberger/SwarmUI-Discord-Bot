@@ -27,4 +27,6 @@ body_string = body_bytes.decode('utf-8') # Decode to a string if desired
 json_output = body_bytes
 data = json.loads(json_output)
 image_output = data["images"]
-print(f"Image output path: {image_output}")
+http_add = "http://209.25.140.99:7860/" + image_output[0]
+Link = http_add.replace(" ", "%20")
+print(f" {Link} ")
